@@ -6,3 +6,12 @@ dataset_tools
 supervisely
 data/
 debug_data/
+app_cache/
+app_data/
+
+/secret_debug.env
+venv
+/src/models/__pycache__
+/src/utils/__pycache__
+.idea
+__pycache__

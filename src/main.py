@@ -41,28 +41,28 @@ if len(custom_data) > 0:
     # preset fields
     custom_data = {
         # required fields
-        "name": "PASCAL VOC 2012",
-        "fullname": "PASCAL Visual Object Classes Challenge",
+        "name": "MinneApple",
+        "fullname": "MinneApple: A Benchmark Dataset for Apple Detection and Segmentation",
         "cv_tasks": [
             "semantic segmentation",
             "object detection",
             "instance segmentation",
         ],
         "annotation_types": ["instance segmentation"],
-        "industries": ["general domain"],
-        "release_year": 2012,
-        "homepage_url": "http://host.robots.ox.ac.uk/pascal/VOC/voc2012/index.html",
-        "license": "custom",
-        "license_url": "http://host.robots.ox.ac.uk/pascal/VOC/voc2012/index.html#rights",
+        "industries": ["agriculture"],
+        "release_year": 2019,
+        "homepage_url": "https://conservancy.umn.edu/handle/11299/206575",
+        "license": "Attribution-NonCommercial-ShareAlike 3.0 United States",
+        "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/us/",
         "preview_image_id": 49551,
-        "github_url": "https://github.com/dataset-ninja/pascal-voc-2012",
-        "citation_url": "http://host.robots.ox.ac.uk/pascal/VOC/voc2012/index.html#citation",
+        "github_url": "https://github.com/dataset-ninja/minne-apple",
+        "citation_url": "https://conservancy.umn.edu/handle/11299/206575",
         "download_sly_url": download_sly_url,
         # optional fields
-        "download_original_url": "http://host.robots.ox.ac.uk/pascal/VOC/voc2012/index.html#devkit",
-        "paper": "http://host.robots.ox.ac.uk/pascal/VOC/pubs/everingham15.pdf",
-        # "organization_name": None,
-        # "organization_url": None,
+        "download_original_url": "https://conservancy.umn.edu/handle/11299/206575",
+        "paper": "https://ieeexplore.ieee.org/document/8954630",
+        "organization_name": "University of Minnesota Robotic Sensor Network Laboratory",
+        "organization_url": "https://rsn.umn.edu/",
         # "tags": [],
     }
     api.project.update_custom_data(project_id, custom_data)
@@ -78,9 +78,7 @@ def build_stats():
         dtools.ClassSizes(project_meta),
     ]
     heatmaps = dtools.ClassesHeatmaps(project_meta)
-    classes_previews = dtools.ClassesPreview(
-        project_meta, project_info.name, force=False
-    )
+    classes_previews = dtools.ClassesPreview(project_meta, project_info.name, force=False)
 
     for stat in stats:
         if not sly.fs.file_exists(f"./stats/{stat.basename_stem}.json"):
@@ -89,9 +87,7 @@ def build_stats():
 
     if not sly.fs.file_exists(f"./stats/{heatmaps.basename_stem}.png"):
         heatmaps.force = True
-    if not sly.fs.file_exists(
-        f"./visualizations/{classes_previews.basename_stem}.webm"
-    ):
+    if not sly.fs.file_exists(f"./visualizations/{classes_previews.basename_stem}.webm"):
         classes_previews.force = True
     vstats = [stat for stat in [heatmaps, classes_previews] if stat.force]
 
@@ -109,13 +105,9 @@ def build_stats():
 
     if len(vstats) > 0:
         if heatmaps.force:
-            heatmaps.to_image(
-                f"./stats/{heatmaps.basename_stem}.png", draw_style="outside_black"
-            )
+            heatmaps.to_image(f"./stats/{heatmaps.basename_stem}.png", draw_style="outside_black")
         if classes_previews.force:
-            classes_previews.animate(
-                f"./visualizations/{classes_previews.basename_stem}.webm"
-            )
+            classes_previews.animate(f"./visualizations/{classes_previews.basename_stem}.webm")
 
     print("Stats done")
 
@@ -133,9 +125,7 @@ def build_visualizations():
     for vis in renderers + animators:
         if not sly.fs.file_exists(f"./visualizations/{vis.basename_stem}.png"):
             vis.force = True
-    renderers, animators = [r for r in renderers if r.force], [
-        a for a in animators if a.force
-    ]
+    renderers, animators = [r for r in renderers if r.force], [a for a in animators if a.force]
 
     for a in animators:
         if not sly.fs.file_exists(f"./visualizations/{a.basename_stem}.webm"):
@@ -177,9 +167,9 @@ def build_summary():
 
 def main():
     pass
-    # build_stats()
-    # build_visualizations()
-    # build_summary()
+    build_stats()
+    build_visualizations()
+    build_summary()
 
 
 if __name__ == "__main__":
