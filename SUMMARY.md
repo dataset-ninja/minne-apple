@@ -1,9 +1,9 @@
-**PASCAL VOC 2012** (PASCAL Visual Object Classes Challenge) is a dataset for semantic segmentation, object detection, and instance segmentation tasks. It is applicable or relevant across various domains.
+**MinneApple** (MinneApple: A Benchmark Dataset for Apple Detection and Segmentation) is a dataset for semantic segmentation, object detection, and instance segmentation tasks. It is used in the agriculture industry.
 
-The dataset consists of 7282 images with 19694 labeled objects belonging to 21 different classes including *neutral*, *person*, *chair,* and other: *car, cat, dog, bird, bottle, sofa, aeroplane, pottedplant, train, diningtable, motorbike, tvmonitor, bus, boat, horse, bicycle, cow, and sheep*.
+The dataset consists of 1001 images with 23065 labeled objects belonging to 1 single class (*apple*).
 
-Each image in the PASCAL VOC 2012 dataset has pixel-level instance segmentation annotations. Due to the nature of the instance segmentation task, it can be automatically transformed into semantic segmentation (only one mask for every class) or object detection (bounding boxes for every object) tasks. There are 1456 (20% of the total) unlabeled images (i.e. without annotations). There are 4 splits in the dataset: *test* (1456 images), *val* (1449 images), *train* (1464 images), and *trainval* (2913 images). The dataset was released in 2012.
+Each image in the MinneApple dataset has pixel-level instance segmentation annotations. Due to the nature of the instance segmentation task, it can be automatically transformed into semantic segmentation (only one mask for every class) or object detection (bounding boxes for every object) tasks. There are 331 (33% of the total) unlabeled images (i.e. without annotations). There are 2 splits in the dataset: *Test* (331 images) and *Train* (670 images). The dataset was released in 2019 by the [University of Minnesota Robotic Sensor Network Laboratory](https://rsn.umn.edu/).
 
-Here are the visualized examples for each of the 21 classes:
+Here is the visualized example of the single apple class:
 
-[Dataset classes](https://github.com/dataset-ninja/pascal-voc-2012/raw/main/visualizations/classes_preview.webm)
+[Dataset classes](https://github.com/dataset-ninja/minne-apple/raw/main/visualizations/classes_preview.webm)
