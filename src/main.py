@@ -56,7 +56,7 @@ custom_data = {
     "homepage_url": "https://conservancy.umn.edu/handle/11299/206575",
     "license": "Attribution-NonCommercial-ShareAlike 3.0 United States",
     "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/us/",
-    "preview_image_id": 184746,
+    "preview_image_id": 185079,
     "github": "dataset-ninja/minne-apple",
     "github_url": "https://github.com/dataset-ninja/minne-apple",
     "citation_url": "https://conservancy.umn.edu/handle/11299/206575",
@@ -95,7 +95,7 @@ def build_stats():
         classes_previews.force = True
     if not api.file.dir_exists(team_id, f"/dataset/{project_id}/renders/"):
         previews.force = True
-    vstats = [stat for stat in [heatmaps, classes_previews] if stat.force]
+    vstats = [stat for stat in [heatmaps, classes_previews, previews] if stat.force]
 
     dtools.count_stats(
         project_id,
