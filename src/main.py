@@ -13,6 +13,8 @@ if sly.is_development():
 os.makedirs("./stats/", exist_ok=True)
 os.makedirs("./visualizations/", exist_ok=True)
 api = sly.Api.from_env()
+team_id = sly.env.team_id()
+workspace_id = sly.env.workspace_id()
 
 
 # 1a initialize sly api way
@@ -54,7 +56,8 @@ custom_data = {
     "homepage_url": "https://conservancy.umn.edu/handle/11299/206575",
     "license": "Attribution-NonCommercial-ShareAlike 3.0 United States",
     "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/us/",
-    "preview_image_id": 49551,
+    "preview_image_id": 184746,
+    "github": "dataset-ninja/minne-apple",
     "github_url": "https://github.com/dataset-ninja/minne-apple",
     "citation_url": "https://conservancy.umn.edu/handle/11299/206575",
     "download_sly_url": download_sly_url,
@@ -79,6 +82,7 @@ def build_stats():
     ]
     heatmaps = dtools.ClassesHeatmaps(project_meta)
     classes_previews = dtools.ClassesPreview(project_meta, project_info.name, force=False)
+    previews = dtools.Previews(project_id, project_meta, api, team_id)
 
     for stat in stats:
         if not sly.fs.file_exists(f"./stats/{stat.basename_stem}.json"):
@@ -89,6 +93,8 @@ def build_stats():
         heatmaps.force = True
     if not sly.fs.file_exists(f"./visualizations/{classes_previews.basename_stem}.webm"):
         classes_previews.force = True
+    if not api.file.dir_exists(team_id, f"/dataset/{project_id}/renders/"):
+        previews.force = True
     vstats = [stat for stat in [heatmaps, classes_previews] if stat.force]
 
     dtools.count_stats(
@@ -108,6 +114,8 @@ def build_stats():
             heatmaps.to_image(f"./stats/{heatmaps.basename_stem}.png", draw_style="outside_black")
         if classes_previews.force:
             classes_previews.animate(f"./visualizations/{classes_previews.basename_stem}.webm")
+        if previews.force:
+            previews.close()
 
     print("Stats done")
 
