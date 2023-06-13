@@ -35,7 +35,7 @@ test_percent = 100
 
 sample_img_count = {"Train": round(6.7 * train_percent), "Test": round(3.31 * test_percent)}
 
-project_name = "MinneApple"
+# project_name = "MinneApple"
 work_dir = "apple_data"
 apple_url = "https://conservancy.umn.edu/bitstream/handle/11299/206575/detection.tar.gz?sequence=2&isAllowed=y"
 
@@ -53,7 +53,8 @@ obj_class_collection = sly.ObjClassCollection([obj_class])
 
 meta = sly.ProjectMeta(obj_classes=obj_class_collection)
 
-storage_dir = sly.app.get_data_dir()
+# storage_dir = sly.app.get_data_dir()
+storage_dir = "./APP_DATA"
 work_dir_path = os.path.join(storage_dir, work_dir)
 sly.io.fs.mkdir(work_dir_path)
 archive_path = os.path.join(work_dir_path, arch_name)
