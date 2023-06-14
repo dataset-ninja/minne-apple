@@ -24,7 +24,7 @@ RELEASE_YEAR: int = 2019
 HOMEPAGE_URL: str = "https://conservancy.umn.edu/handle/11299/206575"
 # e.g. "https://some.com/dataset/homepage"
 
-PREVIEW_IMAGE_ID: int = 185057
+PREVIEW_IMAGE_ID: int = 185489
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
 GITHUB_URL: str = "https://github.com/dataset-ninja/minne-apple"
@@ -41,7 +41,7 @@ DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = {
 }
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
-CLASS2COLOR: Optional[Dict[str, List[str]]] = None
+CLASS2COLOR: Optional[Dict[str, List[str]]] = {"apple": [245, 166, 35]}
 # If specific colors for classes are needed, fill this dict (e.g. {"class1": [255, 0, 0], "class2": [0, 255, 0]})
 
 PAPER: Optional[str] = "https://ieeexplore.ieee.org/document/8954630"
