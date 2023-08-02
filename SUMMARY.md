@@ -6,4 +6,4 @@ Images in the MinneApple dataset have pixel-level instance segmentation annotati
 
 Here is the visualized example grid with annotations:
 
-<img src="https://github.com/dataset-ninja/minne-apple/raw/main/visualizations/side_annotations_grid.png">
+<img src="https://github.com/dataset-ninja/minne-apple/raw/main/visualizations/horizontal_grid.png">
