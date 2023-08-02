@@ -4,7 +4,7 @@
 
 # * Literal["ClassesPreview", "HorizontalGrid", "SideAnnotationsGrid"]
 # * If None, then preview_class will be set automatically to "ClassesPreview"
-PREVIEW_CLASS = "SideAnnotationsGrid"
+PREVIEW_CLASS = "HorizontalGrid"
 
 IS_DETECTION_TASK: bool = None  # ? Set True if you want to visualize only bbox annotations
 
@@ -17,8 +17,8 @@ POSTER_TITLE: str = None
 
 ###############################################################
 #### * Set up visualization params for HorizontalGrid class ###
-HORIZONTAL_GRID_ROWS: int = None
-HORIZONTAL_GRID_COLS: int = None
+HORIZONTAL_GRID_ROWS: int = 2
+HORIZONTAL_GRID_COLS: int = 8
 HORIZONTAL_GRID_IS_DETECTION_TASK: bool = IS_DETECTION_TASK
 ###############################################################
 
