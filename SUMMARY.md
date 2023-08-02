@@ -1,4 +1,4 @@
-**MinneApple: A benchmark dataset for apple detection and segmentation** is a dataset for instance segmentation, object detection, and semantic segmentation tasks. It is used in the agricultural industry. 
+**MinneApple: A benchmark dataset for apple detection and segmentation** is a dataset for instance segmentation, semantic segmentation, and object detection tasks. It is used in the agricultural industry. 
 
 The dataset consists of 1001 images with 23065 labeled objects belonging to 1 single class (*apple*).
 
@@ -6,4 +6,4 @@ Images in the MinneApple dataset have pixel-level instance segmentation annotati
 
 Here is the visualized example grid with annotations:
 
-[Horizontal Grid](https://github.com/dataset-ninja/minne-apple/raw/main/visualizations/horizontal_grid.webm)
+<img src="https://github.com/dataset-ninja/minne-apple/raw/main/visualizations/horizontal_grid.png">
