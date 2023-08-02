@@ -54,7 +54,7 @@ DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = {
 }
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
-CLASS2COLOR: Optional[Dict[str, List[str]]] = {"apple": [0, 255, 255]}
+CLASS2COLOR: Optional[Dict[str, List[str]]] = {"apple": [240, 50, 230]}
 # If specific colors for classes are needed, fill this dict (e.g. {"class1": [255, 0, 0], "class2": [0, 255, 0]})
 
 PAPER: Optional[str] = "https://ieeexplore.ieee.org/document/8954630"
