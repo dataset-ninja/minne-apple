@@ -37,7 +37,7 @@ if RELEASE_DATE is None:
 HOMEPAGE_URL: str = "https://conservancy.umn.edu/handle/11299/206575"
 # e.g. "https://some.com/dataset/homepage"
 
-PREVIEW_IMAGE_ID: int = 185489
+PREVIEW_IMAGE_ID: int = 184786
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
 GITHUB_URL: str = "https://github.com/dataset-ninja/minne-apple"
