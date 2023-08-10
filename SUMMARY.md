@@ -1,4 +1,4 @@
-**MinneApple: A benchmark dataset for apple detection and segmentation** is a dataset for instance segmentation, semantic segmentation, and object detection tasks. It is used in the agricultural industry. 
+**MinneApple: A Benchmark Dataset for Apple Detection and Segmentation** is a dataset for instance segmentation, semantic segmentation, and object detection tasks. It is used in the agricultural industry. 
 
 The dataset consists of 1001 images with 23065 labeled objects belonging to 1 single class (*apple*).
 
