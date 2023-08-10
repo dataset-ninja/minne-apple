@@ -14,7 +14,7 @@ from dataset_tools.templates import (
 # * Before uploading to instance #
 ##################################
 PROJECT_NAME: str = "MinneApple"
-PROJECT_NAME_FULL: str = "MinneApple: A benchmark dataset for apple detection and segmentation"
+PROJECT_NAME_FULL: str = "MinneApple: A Benchmark Dataset for Apple Detection and Segmentation"
 HIDE_DATASET = False  # set False when 100% sure about repo quality
 
 ##################################
