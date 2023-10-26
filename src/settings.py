@@ -59,12 +59,15 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = {"apple": [240, 50, 230]}
 # If specific colors for classes are needed, fill this dict (e.g. {"class1": [255, 0, 0], "class2": [0, 255, 0]})
 
 PAPER: Optional[str] = "https://ieeexplore.ieee.org/document/8954630"
+REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = {"GitHub":"https://github.com/nicolaihaeni/MinneApple"}
+
 CITATION_URL: Optional[str] = "https://conservancy.umn.edu/handle/11299/206575"
 AUTHORS: Optional[List[str]] = [
     "Nicolai Häni",
     "Pravakar Roy",
     "Volkan Isler",
 ]
+AUTHORS_CONTACTS: Optional[List[str]] = ["haeni001@umn.edu", "isler@umn.edu"]
 ORGANIZATION_NAME: Optional[
     Union[str, List[str]]
 ] = "University of Minnesota Robotic Sensor Network Laboratory"
@@ -110,8 +113,10 @@ def get_settings():
     settings["download_original_url"] = DOWNLOAD_ORIGINAL_URL
     settings["class2color"] = CLASS2COLOR
     settings["paper"] = PAPER
+    settings["repository"] = REPOSITORY      
     settings["citation_url"] = CITATION_URL
     settings["authors"] = AUTHORS
+    settings["authors_contacts"] = AUTHORS_CONTACTS  
     settings["organization_name"] = ORGANIZATION_NAME
     settings["organization_url"] = ORGANIZATION_URL
     settings["slytagsplit"] = SLYTAGSPLIT
