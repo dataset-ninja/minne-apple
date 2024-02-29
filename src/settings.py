@@ -28,6 +28,7 @@ CV_TASKS: List[CVTask] = [
     CVTask.InstanceSegmentation(),
     CVTask.SemanticSegmentation(),
     CVTask.ObjectDetection(),
+    CVTask.Counting(),
 ]
 ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.InstanceSegmentation()]
 
