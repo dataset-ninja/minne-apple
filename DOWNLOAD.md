@@ -1,6 +1,6 @@
 Dataset **MinneApple** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](https://www.dropbox.com/scl/fi/7w5dx3vo14zt4gjt7jiih/minneapple-DatasetNinja.tar?rlkey=y63jj1gl2wysgs8n5ltdq5fe5&dl=1)
+ [Download](https://assets.supervisely.com/remote/eyJsaW5rIjogImZzOi8vYXNzZXRzLzI5MjVfTWlubmVBcHBsZS9taW5uZWFwcGxlLURhdGFzZXROaW5qYS50YXIiLCAic2lnIjogIllZVDRjMjNBaVZ5Mnh5RWxmcm9zVFQzVUppVjZ2U2JQbnZFVUJPeVgxNFE9In0=)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
